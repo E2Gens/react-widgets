@@ -4,7 +4,7 @@ import { polyfill as polyfillLifecycles } from 'react-lifecycles-compat'
 import PropTypes from 'prop-types'
 import cn from 'classnames'
 import { autoFocus, timeoutManager } from 'react-component-managers'
-import createUncontrolledWidget from 'uncontrollable'
+import { uncontrollable } from 'uncontrollable'
 
 import List from './List'
 import Widget from './Widget'
@@ -409,7 +409,7 @@ class SelectList extends React.Component {
   }
 }
 
-export default createUncontrolledWidget(SelectList, { value: 'onChange' }, [
+export default uncontrollable(SelectList, { value: 'onChange' }, [
   'selectAll',
   'focus',
 ])
